@@ -24,7 +24,7 @@ namespace EPlayers_AspNetCore.Models
         }
 
 
-        public void Creat(Equipe e)
+        public void Create(Equipe e)
         {
             string[] linhas = { Prepare(e) };
             File.AppendAllLines(PATH, linhas);

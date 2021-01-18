@@ -5,7 +5,7 @@ namespace EPlayers_AspNetCore.Interfaces
 {
     public interface IEquipe
     {
-        void Creat(Equipe e);
+        void Create(Equipe e);
 
         List<Equipe> ReadAll();
 

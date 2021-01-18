@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +23,7 @@
             </div>
             <nav id="menu">
                 <ul>
-                    <li><a href="index.html" title="voltar para a página inicial">INÍCIO</a></li>
+                    <li><a asp-area="Link para ir para página inicial" asp-controller="Home" asp-action="Index" title="voltar para a página inicial">INÍCIO</a></li>
                     <li><a href="#horarios" title="Ir até a sessão de horários das partidas">HORÁRIOS</a></li>
                     <li><a href="#resultados" title="Ir até a sessão de resultados das partidas">RESULTADOS</a></li>
                     <li><a href="#noticias" title="Ir até a sessão de notícias">NOTÍCIAS</a></li>
@@ -32,11 +32,10 @@
             </nav>
         </div>
     </header>
-    <div>
+
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
 
     <footer>
         <div class="container">

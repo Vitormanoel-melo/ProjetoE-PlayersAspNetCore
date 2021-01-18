@@ -10,6 +10,9 @@ namespace EPlayersAspNetCoreTeste.Models
         public int IdJogador { get; set; }
         public string Nome { get; set; }
         public int IdEquipe { get; set; }
+        public string Email {get; set;}
+        public string Senha { get; set; }
+        
         
         public const string PATH = "Database/Jogador.csv";
 
@@ -18,7 +21,7 @@ namespace EPlayersAspNetCoreTeste.Models
             CreatFolderAndFile(PATH);
         }
 
-        public string PrepararCSV(Jogador j)
+        public string PrepareCSV(Jogador j)
         {
             return $"{j.IdJogador};{j.Nome};{j.IdEquipe}";
         }
@@ -26,7 +29,7 @@ namespace EPlayersAspNetCoreTeste.Models
         public void Create(Jogador j)
         {
             // Adicionar jogador no CSV
-            string[] linhas = { PrepararCSV(j) };
+            string[] linhas = { PrepareCSV(j) };
             File.AppendAllLines(PATH, linhas);
         }
         
@@ -65,7 +68,7 @@ namespace EPlayersAspNetCoreTeste.Models
 
             Lista.RemoveAll(x => x.Split(";")[0] == jogador.IdJogador.ToString());
 
-            Lista.Add( PrepararCSV(jogador) );
+            Lista.Add( PrepareCSV(jogador) );
 
             ReWriteCSv(PATH, Lista);
         }

@@ -60,7 +60,7 @@ namespace EPlayers_AspNetCore.Controllers
             }
 
             // chamamos o método Create para salvar a nova equipe no CSV
-            equipeModel.Creat(novaEquipe);            
+            equipeModel.Create(novaEquipe);            
             ViewBag.Equipes = novaEquipe.ReadAll();
 
             return LocalRedirect("~/Equipe/Listar");
