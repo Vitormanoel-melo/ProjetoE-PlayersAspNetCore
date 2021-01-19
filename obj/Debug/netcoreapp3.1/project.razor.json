@@ -14392,6 +14392,11 @@
   "RootNamespace": "EPlayers_AspNetCore",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\Vitor Manoel\\Desktop\\EPlayers_AspNetCore\\Views\\Noticia\\index.cshtml",
+      "TargetPath": "Views\\Noticia\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Vitor Manoel\\Desktop\\EPlayers_AspNetCore\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"

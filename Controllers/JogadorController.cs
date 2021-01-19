@@ -19,7 +19,7 @@ namespace EPlayersAspNetCoreTeste.Controllers
             ViewBag.Jogadores = jogadorModel.ReadAll();
             return View();
         }
-
+    
         [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection form){
 
