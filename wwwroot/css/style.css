@@ -38,6 +38,14 @@ ul{
     list-style-type: none;
 }
 
+.erro{
+    color: var(--pink);
+}
+
+.banner a{
+    margin: 0 1.25em;
+}
+
 .cabecalho{
     display: flex;
     justify-content: space-around;

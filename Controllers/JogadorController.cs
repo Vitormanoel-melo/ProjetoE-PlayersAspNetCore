@@ -1,4 +1,5 @@
 using System;
+using EPlayers_AspNetCore.Models;
 using EPlayersAspNetCoreTeste.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,10 +10,12 @@ namespace EPlayersAspNetCoreTeste.Controllers
     public class JogadorController : Controller
     {
         Jogador jogadorModel = new Jogador();
+        Equipe equipeModel = new Equipe();
 
         [Route("Listar")]
         public IActionResult Index(){
-
+            
+            ViewBag.Equipes = equipeModel.ReadAll();
             ViewBag.Jogadores = jogadorModel.ReadAll();
             return View();
         }
@@ -23,13 +26,13 @@ namespace EPlayersAspNetCoreTeste.Controllers
             Jogador jogador = new Jogador();
             jogador.IdJogador = Int32.Parse(form["IdJogador"]);
             jogador.Nome = form["Nome"];
-            jogador.IdEquipe = int.Parse(form["IdEquipe"]);
+            jogador.Email = form["Email"];
+            jogador.Senha = form["Senha"];
 
             jogadorModel.Create(jogador);
             ViewBag.Jogadores = jogadorModel.ReadAll();
             
             return LocalRedirect("~/Jogador/Listar");
-
         }
 
 

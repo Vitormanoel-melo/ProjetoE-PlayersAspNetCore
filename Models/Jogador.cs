@@ -23,7 +23,7 @@ namespace EPlayersAspNetCoreTeste.Models
 
         public string PrepareCSV(Jogador j)
         {
-            return $"{j.IdJogador};{j.Nome};{j.IdEquipe}";
+            return $"{j.IdJogador};{j.Nome};{j.Email};{j.Senha}";
         }
 
         public void Create(Jogador j)
@@ -36,7 +36,6 @@ namespace EPlayersAspNetCoreTeste.Models
 
         public List<Jogador> ReadAll()
         {
-            // Listar o csv
             List<Jogador> ListaJogador = new List<Jogador>();
 
             string[] linha = File.ReadAllLines(PATH); 
@@ -44,16 +43,11 @@ namespace EPlayersAspNetCoreTeste.Models
             foreach (var item in linha)
             {
                 string[] atributos = item.Split(";");
-                /*
-                    [0] = IdJogador
-                    [1] = Nome
-                    [2] = IdEquipe
-                */
-
                 Jogador jogador = new Jogador();
                 jogador.IdJogador = int.Parse(atributos[0]);
                 jogador.Nome = atributos[1];
-                jogador.IdEquipe = int.Parse(atributos[2]);
+                jogador.Email = atributos[2];
+                jogador.Senha = atributos[3];
 
                 ListaJogador.Add(jogador);
             }
@@ -81,6 +75,7 @@ namespace EPlayersAspNetCoreTeste.Models
 
             ReWriteCSv(PATH, Lista);
         }
+        
 
     }
 }

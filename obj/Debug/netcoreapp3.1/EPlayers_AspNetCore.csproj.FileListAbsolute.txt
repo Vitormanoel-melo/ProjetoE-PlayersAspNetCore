@@ -36,3 +36,4 @@ C:\Users\Vitor Manoel\Desktop\EPlayers_AspNetCore\obj\Debug\netcoreapp3.1\EPlaye
 C:\Users\Vitor Manoel\Desktop\EPlayers_AspNetCore\obj\Debug\netcoreapp3.1\EPlayers_AspNetCore.genruntimeconfig.cache
 C:\Users\Vitor Manoel\Desktop\EPlayers_AspNetCore\obj\Debug\netcoreapp3.1\EPlayers_AspNetCore.csproj.CopyComplete
 C:\Users\Vitor Manoel\Desktop\EPlayers_AspNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Jogador\index.cshtml.g.cs
+C:\Users\Vitor Manoel\Desktop\EPlayers_AspNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Login\index.cshtml.g.cs
